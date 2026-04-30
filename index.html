@@ -185,7 +185,9 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', Georgia, serif; font-weight
   .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background:
+    radial-gradient(circle at 15% 85%, rgba(255,215,0,0.06), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(255,215,0,0.04), transparent 40%);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
@@ -204,13 +206,33 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', Georgia, serif; font-weight
   text-align: center;
   padding: 120px 20px 80px;
   overflow: hidden;
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #222 70%, #1a1a1a 100%);
+  /* Chalkboard / rustic dark texture via CSS */
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.01) 2px,
+      rgba(255,255,255,0.01) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.008) 2px,
+      rgba(255,255,255,0.008) 4px
+    ),
+    radial-gradient(ellipse at 20% 50%, rgba(255,215,0,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(255,215,0,0.03) 0%, transparent 50%),
+    linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #222 70%, #1a1a1a 100%);
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background:
+    radial-gradient(circle at 15% 85%, rgba(255,215,0,0.06), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(255,215,0,0.04), transparent 40%);
   pointer-events: none;
 }
 .hero-content { position: relative; z-index: 1; }
