@@ -242,7 +242,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', Georgia, serif; font-weight
   letter-spacing: 6px;
   text-transform: uppercase;
   color: var(--gold);
-  border: 1px solid var(--gold);
   padding: 6px 20px;
   margin-bottom: 24px;
   opacity: 0;
@@ -352,14 +351,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', Georgia, serif; font-weight
   justify-content: center;
   text-align: center;
   padding: 50px 30px;
-  border: 2px solid var(--gold);
   position: relative;
+  overflow: hidden;
+  border-radius: 12px;
 }
 .about-badge::before {
-  content: '';
-  position: absolute;
-  inset: 8px;
-  border: 1px solid rgba(255,215,0,0.3);
+  display: none;
 }
 .badge-icon {
   font-size: 2rem;
@@ -771,9 +768,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', Georgia, serif; font-weight
         <p>We believe great food doesn't need to be complicated. Just quality ingredients, real flavor, and a whole lot of heart on every plate that comes off our truck.</p>
       </div>
       <div class="about-badge fade-in-right">
-        <div class="badge-icon">🚚</div>
-        <h3 class="badge-title">NJ's Newest<br>Food Truck</h3>
-        <span class="badge-sub">Est. 2025 • New Jersey</span>
+        <img src="truck-exterior-1.jpg" alt="Cassidy's Kitchen Food Truck" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
       </div>
     </div>
     <div class="about-values fade-in">
